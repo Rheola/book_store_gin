@@ -34,7 +34,8 @@ func main() {
 
 	//авторы
 	r.GET("/admin/author", adminAuthorIndex)
-	r.GET("/admin/author/new", authorForm)
+	r.GET("/admin/author/view/:id", authorView)
+	r.GET("/admin/author/create", authorForm)
 	r.POST("/admin/author/save", authorSave)
 
 	// Handle all requests using net/http

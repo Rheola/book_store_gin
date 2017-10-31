@@ -5,18 +5,24 @@
             <h1>Авторы</h1>
         </div>
         <div>
-            <a href="/admin/author/new" class="btn btn-default">Добавить автора</a>
+            <a href="/admin/author/create" class="btn btn-success">Добавить</a>
         </div>
 
         {{range .authors}}
         <div>
-            <h2><a href="/admin/author/{{.Id}}">{{.Name}}</a></h2>
-            {{.Content}}
+            <p>
+                <a href="/admin/author/view/{{.Id}}">{{.Name}}</a>
+            </p>
 
             <div class="btn-group">
-                <a href="/admin/author/{{.Id}}/edit" class="btn btn-default">Редактировать</a>
-                <a href="/admin/author/{{.Id}}" class="delete btn btn-danger">Удалить</a>
+                <a href="/admin/author/author/edit/{{.Id}}/" class="btn btn-info">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a href="/admin/author/{{.Id}}" class="delete btn btn-danger btn btn-primary btn-block">
+                    <i class="fa fa-trash"></i>
+                </a>
             </div>
+            <hr>
         </div>
         {{end}}
     </div>
