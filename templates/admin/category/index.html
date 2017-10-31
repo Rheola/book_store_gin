@@ -1,0 +1,31 @@
+{{define "content"}}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="page-header">
+            <h1>Категории</h1>
+        </div>
+        <div>
+            <a href="/admin/category/create" class="btn btn-success">Добавить</a>
+        </div>
+
+        {{range .categories}}
+        <div>
+            <p>
+                <a href="/admin/category/view/{{.Id}}">{{.Name}}</a>
+            </p>
+
+            <div class="btn-group">
+                <a href="/admin/category/category/edit/{{.Id}}/" class="btn btn-info">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a href="/admin/category/{{.Id}}" class="delete btn btn-danger btn btn-primary btn-block">
+                    <i class="fa fa-trash"></i>
+                </a>
+            </div>
+            <hr>
+        </div>
+        {{end}}
+    </div>
+</div>
+
+{{end}}

@@ -38,8 +38,17 @@ func main() {
 	r.GET("/admin/author/create", authorForm)
 	r.POST("/admin/author/save", authorSave)
 	r.GET("/admin/author/update/:id", toDoAuthor)
-	r.POST("/admin/author/:id", toDoAuthor)
-	r.DELETE("/admin/author/:id", toDoAuthor)
+	//r.POST("/admin/author/:id", toDoAuthor)
+	//r.DELETE("/admin/author/:id", toDoAuthor)
+
+	//категории
+	r.GET("/admin/category", adminCategoryIndex)
+	r.GET("/admin/category/view/:id", categoryView)
+	r.GET("/admin/category/create", categoryForm)
+	r.POST("/admin/category/save", categorySave)
+	r.GET("/admin/category/update/:id", toDoCategory)
+	//r.POST("/admin/category/:id", toDoCategory)
+	//r.DELETE("/admin/category/:id", toDoCategory)
 
 	// Handle all requests using net/http
 	http.Handle("/", r)
