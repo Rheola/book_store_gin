@@ -1,0 +1,20 @@
+{{define "content"}}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="page-header">
+            <h1>Добавить автора</h1>
+        </div>
+
+        <form action="/admin/author/save" method="post" class="form" >
+            <div class="form-group">
+                <label for="name">Имя</label>
+                <input id="name" type="text" name="name" value="" class="form-control"/>
+            </div>
+
+            <input id="submit" type="submit" value="Сохранить" class="btn btn-primary"/>
+        </form>
+    </div>
+</div>
+
+{{end}}
