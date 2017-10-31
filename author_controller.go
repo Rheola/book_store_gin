@@ -71,3 +71,7 @@ func authorView(c *gin.Context) {
 		c.String(500, "Internal Server Error")
 	}
 }
+
+func toDoAuthor(c *gin.Context) {
+	c.String(500, "Не реализовано")
+}

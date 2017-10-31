@@ -37,6 +37,9 @@ func main() {
 	r.GET("/admin/author/view/:id", authorView)
 	r.GET("/admin/author/create", authorForm)
 	r.POST("/admin/author/save", authorSave)
+	r.GET("/admin/author/update/:id", toDoAuthor)
+	r.POST("/admin/author/:id", toDoAuthor)
+	r.DELETE("/admin/author/:id", toDoAuthor)
 
 	// Handle all requests using net/http
 	http.Handle("/", r)
